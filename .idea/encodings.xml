@@ -4,6 +4,7 @@
     <file url="file://$PROJECT_DIR$/SQLiteExtreme/res/layout/activity_main_scanner.xml" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/SQLiteExtreme/src/com/bolivia/sqliteextreme/ScannerToData.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/SQLiteExtreme/src/com/bolivia/sqliteextreme/ScannerToData1.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SQLiteExtreme/src/com/bolivia/sqliteextreme/ScannerToData44.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/SQLiteExtreme/src/com/bolivia/sqliteextreme/db/android/IntentIntegrator.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/SQLiteExtreme/src/com/bolivia/sqliteextreme/db/android/IntentResult.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/SQLiteExtreme/src/com/google/zxing/integration/android/IntentIntegrator.java" charset="UTF-8" />

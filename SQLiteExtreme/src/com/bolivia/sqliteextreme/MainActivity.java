@@ -50,6 +50,7 @@ public class MainActivity extends Activity implements OnClickListener{
 	EditText et33;
 	EditText et44;
 	int b;
+	int c;
 	Intent intent;
 	//
     private SQLite sqlite;
@@ -266,8 +267,8 @@ String l4;
 	}
 
 	public void performScanlalala44(View view) {
-		b=0;
-		b=5;
+		c=0;
+		c=5;
 		com.google.zxing.integration.android.IntentIntegrator scanIntegrator =
 				new com.google.zxing.integration.android.IntentIntegrator(this);
 		scanIntegrator.initiateScan();
@@ -290,10 +291,10 @@ String l4;
 		//txtName1.setText(scanContent);
 		//if (Resuli==1){Toast.makeText(getApplicationContext(), ": " + scanContent, Toast.LENGTH_LONG).show();}
 		if (b==2){Toast.makeText(getApplicationContext(), ": " + scanContent, Toast.LENGTH_LONG).show();
-			txtName.setText("Contenido: " + scanContent);
+			et33.setText("Contenido: " + scanContent);
 		}
 		if (b==5){Toast.makeText(getApplicationContext(), ": " + scanContent, Toast.LENGTH_LONG).show();
-			txtName1.setText("Contenido: " + scanContent);
+			et44.setText("Contenido: " + scanContent);
 		}
 		//   Intent resultIntent = new Intent();
 		//   resultIntent.putExtra("result", "Getting Smile Back!!");

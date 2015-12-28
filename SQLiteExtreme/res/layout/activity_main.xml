@@ -252,12 +252,12 @@
         <EditText
             android:layout_width="171dp"
             android:layout_height="wrap_content"
-            android:id="@+id/eT33"
+            android:id="@+id/et33"
             android:layout_gravity="right" />
         <EditText
             android:layout_width="140dp"
             android:layout_height="wrap_content"
-            android:id="@+id/eT44" />
+            android:id="@+id/et44" />
 
     </LinearLayout>
 
