@@ -1,0 +1,268 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/lbName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/strTitle"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp" >
+
+        <TextView
+            android:id="@+id/lbTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/strName"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/txtName"
+            android:layout_alignParentStart="true"
+            android:layout_alignBottom="@+id/txtName"
+            android:gravity="center_vertical"
+            tools:ignore="RtlCompat" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtName"
+
+            android:layout_alignWithParentIfMissing="false"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="114dp"
+            android:layout_marginStart="114dp"
+            android:layout_toLeftOf="@+id/buttonlalala"
+            android:layout_toStartOf="@+id/buttonlalala"
+            android:layout_alignBottom="@+id/buttonlalala" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="scan"
+            android:id="@+id/buttonlalala"
+            android:onClick="performScanlalala"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            tools:ignore="RtlCompat"
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/strName"
+            android:gravity="center_vertical"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/lbTitle" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/editTextlalala1"
+            android:layout_alignWithParentIfMissing="false"
+            android:layout_alignParentBottom="true"
+            android:layout_alignLeft="@+id/txtName"
+            android:layout_alignStart="@+id/txtName"
+            android:layout_toLeftOf="@+id/buttonlalala"
+            android:layout_toStartOf="@+id/buttonlalala"
+            android:layout_alignTop="@+id/buttonlalala1" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="scan"
+            android:id="@+id/buttonlalala1"
+            android:onClick="onClickLALALA1"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@+id/editTextlalala1"
+            android:layout_toEndOf="@+id/editTextlalala1" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/lbFechaNac"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/strFechaNac" />
+
+        <TextView
+            android:id="@+id/txtFechaNac"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/strfecha"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/lbPais"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/strPais" />
+
+        <Spinner
+            android:id="@+id/sPaises"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/lbPai"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/strSexo" />
+
+		<RadioGroup
+    		android:id="@+id/gpSexo"
+    		android:layout_width="0dip"
+    		android:layout_height="wrap_content"
+    		android:layout_weight="1" >
+
+	            <RadioButton
+	            	android:id="@+id/rMan"
+	            	android:layout_width="wrap_content"
+	            	android:layout_height="wrap_content"
+	            	android:layout_weight="1"
+	            	android:checked="true"
+	            	android:text="@string/strMan" />
+
+   	            <RadioButton
+	            	android:id="@+id/rWoman"
+	            	android:layout_width="wrap_content"
+	            	android:layout_height="wrap_content"
+	            	android:layout_weight="1"
+	            	android:text="@string/strWoman" />
+		</RadioGroup>        
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/lbSpeak"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/strSpeak" />
+
+        <CheckBox
+            android:id="@+id/chIdioma"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/strSi" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/btnRegistrar"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/strReg" />
+
+        <Button
+            android:id="@+id/btnRegistros"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/strRegistros" />
+        
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btnCancelar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/strCerrar"
+            android:layout_gravity="bottom" />
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:text="New Button"
+        android:id="@+id/escanea4"
+        android:onClick="performScanlalala44"
+        android:layout_gravity="right" />
+
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:text="New Button"
+            android:id="@+id/buttonhkjhkj"
+            android:onClick="performScanlalala" />
+        <EditText
+            android:layout_width="171dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/eT33"
+            android:layout_gravity="right" />
+        <EditText
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/eT44" />
+
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>
