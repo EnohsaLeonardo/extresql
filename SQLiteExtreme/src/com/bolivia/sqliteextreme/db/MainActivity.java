@@ -1,4 +1,4 @@
-/*
+
 package com.bolivia.sqliteextreme.db;
 //
 import android.app.Activity;
@@ -29,7 +29,7 @@ import java.util.Calendar;
 //
 //
 
-public class MainActivityold extends Activity implements OnClickListener{
+public class MainActivity extends Activity implements OnClickListener{
 
 	//Variables para fecha
     private int mYear;

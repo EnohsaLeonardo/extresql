@@ -26,7 +26,7 @@ public class ScannerToDataUltimo extends Activity implements OnClickListener {
         setContentView(R.layout.activity_main);
 
         //instantiate UI items
-        scanBtn = (Button)findViewById(R.id.buttonhkjhkjUltimo);
+        scanBtn = (Button)findViewById(R.id.escanea44);
         formatTxt = (TextView)findViewById(R.id.scan_format);
         contentTxt = (TextView)findViewById(R.id.scan_content);
         scanBtn.setOnClickListener(this);
@@ -38,7 +38,7 @@ public class ScannerToDataUltimo extends Activity implements OnClickListener {
 
     public void onClick(View v) {
         //check for scan button
-        if (v.getId() == R.id.scan_button) {
+        if (v.getId() == R.id.escanea44) {
             //instantiate ZXing integration class
             IntentIntegrator scanIntegrator = new IntentIntegrator(this);
             //start scanning
@@ -53,7 +53,7 @@ public class ScannerToDataUltimo extends Activity implements OnClickListener {
         if (scanningResult != null) {
             //get content from Intent Result
             String scanContent = scanningResult.getContents();
-            String resultadofinal = scanningResult.getContents();
+            String resultadofinal44 = scanningResult.getContents();
             //get format name of data scanned
             String scanFormat = scanningResult.getFormatName();
 
@@ -63,11 +63,11 @@ public class ScannerToDataUltimo extends Activity implements OnClickListener {
 
             setContentView(R.layout.activity_main);
             TextView txtCambiado = (TextView)findViewById(R.id.et33);
-            txtCambiado.setText(scanContent);
+            txtCambiado.setText(resultadofinal44);
 
 
-            //Intent resultIntent = new Intent();
-            //resultIntent.putExtra("result", "Getting Smile Back!!");
+            Intent resultIntent = new Intent();
+            resultIntent.putExtra("result44", resultadofinal44);
 
             //if (at==null){resultIntent.putExtra("lalala", scanContent);}
             //else { resultIntent.putExtra("lalala", at);}

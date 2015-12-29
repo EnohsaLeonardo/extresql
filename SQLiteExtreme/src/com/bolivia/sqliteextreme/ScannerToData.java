@@ -53,7 +53,7 @@ public class ScannerToData extends Activity implements OnClickListener {
         if (scanningResult != null) {
             //get content from Intent Result
             String scanContent = scanningResult.getContents();
-            String resultadofinal = scanningResult.getContents();
+            String resultadofinalA = scanningResult.getContents();
             //get format name of data scanned
             String scanFormat = scanningResult.getFormatName();
 
@@ -68,7 +68,7 @@ public class ScannerToData extends Activity implements OnClickListener {
 
 
             String datosdelscanner = null;
-            resultIntent.putExtra("datosdelescaner", resultadofinal);
+            resultIntent.putExtra("datosdelescaner", resultadofinalA);
             setResult(RESULT_OK, resultIntent);
             finish();
 

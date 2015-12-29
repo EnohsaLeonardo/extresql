@@ -33,16 +33,16 @@
             android:layout_weight="1"
             android:text="@string/strName"
             android:layout_alignParentTop="true"
-            android:layout_toRightOf="@+id/txtName"
+            android:layout_toRightOf="@+id/etName"
             android:layout_alignParentStart="true"
-            android:layout_alignBottom="@+id/txtName"
+            android:layout_alignBottom="@+id/etName"
             android:gravity="center_vertical"
             tools:ignore="RtlCompat" />
 
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/txtName"
+            android:id="@+id/etName"
 
             android:layout_alignWithParentIfMissing="false"
             android:layout_alignParentTop="true"
@@ -59,10 +59,11 @@
             android:layout_height="wrap_content"
             android:text="scan"
             android:id="@+id/buttonlalala"
-            android:onClick="performScanlalala"
+            android:onClick="onClickLALALA"
             android:layout_alignParentTop="true"
             android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true" />
+            android:layout_alignParentEnd="true"
+             />
 
         <TextView
             tools:ignore="RtlCompat"
@@ -80,11 +81,11 @@
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/editTextlalala1"
+            android:id="@+id/etName1"
             android:layout_alignWithParentIfMissing="false"
             android:layout_alignParentBottom="true"
-            android:layout_alignLeft="@+id/txtName"
-            android:layout_alignStart="@+id/txtName"
+            android:layout_alignLeft="@+id/etName"
+            android:layout_alignStart="@+id/etName"
             android:layout_toLeftOf="@+id/buttonlalala"
             android:layout_toStartOf="@+id/buttonlalala"
             android:layout_alignTop="@+id/buttonlalala1" />
@@ -96,8 +97,8 @@
             android:id="@+id/buttonlalala1"
             android:onClick="onClickLALALA1"
             android:layout_alignParentBottom="true"
-            android:layout_toRightOf="@+id/editTextlalala1"
-            android:layout_toEndOf="@+id/editTextlalala1" />
+            android:layout_toRightOf="@+id/etName1"
+            android:layout_toEndOf="@+id/etName1" />
 
     </RelativeLayout>
 
@@ -232,7 +233,7 @@
         android:layout_width="wrap_content"
         android:layout_height="32dp"
         android:text="New Button"
-        android:id="@+id/escanea4"
+        android:id="@+id/escanea44"
         android:onClick="performScanlalala44"
         android:layout_gravity="right" />
 

@@ -76,8 +76,8 @@ public class MainActivity extends Activity implements OnClickListener{
 		setContentView(R.layout.activity_main);
 		//
 		chIdioma = (CheckBox) findViewById( R.id.chIdioma );
-		txtName = (EditText) findViewById( R.id.txtName );
-		txtName1 = (EditText) findViewById( R.id.editTextlalala1 );
+		txtName = (EditText) findViewById( R.id.etName);
+		txtName1 = (EditText) findViewById( R.id.etName1);
 		//txtName2 =(EditText) findViewById(R.id.AAAAB);
 		btnRegistrar = (Button) findViewById(R.id.btnRegistrar );
 		btnRegistrar.setOnClickListener( this );
@@ -130,6 +130,16 @@ public class MainActivity extends Activity implements OnClickListener{
 		String edit2 = txtName1.getText().toString();
 		outState.putString("STRING1", edit1);
 		outState.putString("STRING2", edit2);
+
+
+		//Se Instancia el botón de Scan
+		Button scanBtn = (Button) findViewById(R.id.buttonhkjhkjUltimo);
+//Se Instancia el Campo de Texto para el nombre del formato de código de barra
+		TextView formatTxt = (TextView) findViewById(R.id.etName);
+//Se Instancia el Campo de Texto para el contenido  del código de barra
+		TextView contentTxt = (TextView) findViewById(R.id.etName1);
+//Se agrega la clase MainActivityold3.java como Listener del evento click del botón de Scan
+		scanBtn.setOnClickListener(this);
 	}
 	@Override
 	protected void onRestoreInstanceState(Bundle savedInstanceState) {
@@ -271,7 +281,7 @@ String l4;
 				new com.google.zxing.integration.android.IntentIntegrator(this);
 		scanIntegrator.initiateScan();
 		IntentResult scanningResult = IntentIntegrator.parseActivityResult(requestCode, resultCode, intent,b);
-
+		//setContentView(R.layout.activity_main);
 	}
 
 
@@ -292,12 +302,14 @@ String l4;
 
 	//txtName1.setText(scanContent);
 	//if (Resuli==1){Toast.makeText(getApplicationContext(), ": " + scanContent, Toast.LENGTH_LONG).show();}
+		//String resul44b = data.getStringExtra("result44");
 	if (b==2){Toast.makeText(getApplicationContext(), ": " + scanContent, Toast.LENGTH_LONG).show();
 		et33.setText(": " + scanContent);
 	} else {Toast.makeText(getApplicationContext(), "NO B33 ", Toast.LENGTH_LONG).show();}
 
 	if (b==5){Toast.makeText(getApplicationContext(), ": " + scanContent, Toast.LENGTH_LONG).show();
 		et44.setText(": " + scanContent);}
+
 	//else {Toast.makeText(getApplicationContext(), "NO B44 ", Toast.LENGTH_LONG).show();}
 	//Toast.makeText(getApplicationContext(), "b= "b , Toast.LENGTH_LONG).show();
 	//   Intent resultIntent = new Intent();
@@ -306,15 +318,7 @@ String l4;
 
 }
 	public void onClickultimo(View view) {
-		int b=0;
-		String atob=null;
-		atob=et33.getText().toString();
-		Intent intent = new Intent(MainActivity.this, ScannerToDataUltimo.class);
-		if (atob !=null){intent.putExtra("EnvioDelUltimoAlDos", atob);}
-		else
-		{Toast.makeText(getApplicationContext(), "ultimo pasa a b: " + atob, Toast.LENGTH_LONG).show();}
-		//if (txtName !=null) {intent.putExtra("enviodel1aldos", txtName;
-		startActivityForResult(intent, 1);
+
 
 	}
 }
