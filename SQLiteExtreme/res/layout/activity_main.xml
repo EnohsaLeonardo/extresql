@@ -247,8 +247,10 @@
             android:layout_width="wrap_content"
             android:layout_height="32dp"
             android:text="New Button"
-            android:id="@+id/buttonhkjhkj"
-            android:onClick="performScanlalala" />
+            android:id="@+id/buttonhkjhkjUltimo"
+            android:onClick="onClickultimo"
+
+        />
         <EditText
             android:layout_width="171dp"
             android:layout_height="wrap_content"

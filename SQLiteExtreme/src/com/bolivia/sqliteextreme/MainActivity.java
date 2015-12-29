@@ -258,9 +258,7 @@ String l4;
 	}
 
 	public void performScanlalala(View view) {
-        int b=0;
-		b=2;
-			com.google.zxing.integration.android.IntentIntegrator scanIntegrator =
+        			com.google.zxing.integration.android.IntentIntegrator scanIntegrator =
 				new com.google.zxing.integration.android.IntentIntegrator(this);
 		scanIntegrator.initiateScan();
 		IntentResult scanningResult = IntentIntegrator.parseActivityResult(requestCode, resultCode, intent,b);
@@ -272,33 +270,51 @@ String l4;
 		com.google.zxing.integration.android.IntentIntegrator scanIntegrator =
 				new com.google.zxing.integration.android.IntentIntegrator(this);
 		scanIntegrator.initiateScan();
-		IntentResult scanningResult = IntentIntegrator.parseActivityResult(requestCode, resultCode, intent,b);}
+		IntentResult scanningResult = IntentIntegrator.parseActivityResult(requestCode, resultCode, intent,b);
+
+	}
 
 
 
-	public void onActivityResult(int requestCode, int resultCode, Intent intent) {
-		//retrieve result of scanning - instantiate ZXing object
-		IntentResult scanningResult =
-				com.google.zxing.integration.android.IntentIntegrator.parseActivityResult(requestCode, resultCode, intent, b);
-		//get content from Intent Result
-		String scanContent = scanningResult.getContents();
-		String resultadofinal = scanningResult.getContents();
-		//int rrr=
-		//get format name of data scanned
-		//String scanFormat = scanningResult.getFormatName();
-		//formatTxt.setText("FORMAT: " + scanFormat);
 
-		//txtName1.setText(scanContent);
-		//if (Resuli==1){Toast.makeText(getApplicationContext(), ": " + scanContent, Toast.LENGTH_LONG).show();}
-		if (b==2){Toast.makeText(getApplicationContext(), ": " + scanContent, Toast.LENGTH_LONG).show();
-			et33.setText("Contenido: " + scanContent);
-		}
-		if (b==5){Toast.makeText(getApplicationContext(), ": " + scanContent, Toast.LENGTH_LONG).show();
-			et44.setText("Contenido: " + scanContent);
-		}
-		//   Intent resultIntent = new Intent();
-		//   resultIntent.putExtra("result", "Getting Smile Back!!");
+	public void onActivityResult(int requestCode, int resultCode, Intent intent, int b) {
+	//retrieve result of scanning - instantiate ZXing object
+	IntentResult scanningResult =
+			com.google.zxing.integration.android.IntentIntegrator.parseActivityResult(requestCode, resultCode, intent, b);
+	//get content from Intent Result
+	String scanContent = scanningResult.getContents();
+	String resultadofinal = scanningResult.getContents();
+	//int bfinal=
+	//int rrr=
+	//get format name of data scanned
+	//String scanFormat = scanningResult.getFormatName();
+	//formatTxt.setText("FORMAT: " + scanFormat);
+
+	//txtName1.setText(scanContent);
+	//if (Resuli==1){Toast.makeText(getApplicationContext(), ": " + scanContent, Toast.LENGTH_LONG).show();}
+	if (b==2){Toast.makeText(getApplicationContext(), ": " + scanContent, Toast.LENGTH_LONG).show();
+		et33.setText(": " + scanContent);
+	} else {Toast.makeText(getApplicationContext(), "NO B33 ", Toast.LENGTH_LONG).show();}
+
+	if (b==5){Toast.makeText(getApplicationContext(), ": " + scanContent, Toast.LENGTH_LONG).show();
+		et44.setText(": " + scanContent);}
+	//else {Toast.makeText(getApplicationContext(), "NO B44 ", Toast.LENGTH_LONG).show();}
+	//Toast.makeText(getApplicationContext(), "b= "b , Toast.LENGTH_LONG).show();
+	//   Intent resultIntent = new Intent();
+	//   resultIntent.putExtra("result", "Getting Smile Back!!");
 
 
 }
+	public void onClickultimo(View view) {
+		int b=0;
+		String atob=null;
+		atob=et33.getText().toString();
+		Intent intent = new Intent(MainActivity.this, ScannerToDataUltimo.class);
+		if (atob !=null){intent.putExtra("EnvioDelUltimoAlDos", atob);}
+		else
+		{Toast.makeText(getApplicationContext(), "ultimo pasa a b: " + atob, Toast.LENGTH_LONG).show();}
+		//if (txtName !=null) {intent.putExtra("enviodel1aldos", txtName;
+		startActivityForResult(intent, 1);
+
+	}
 }
