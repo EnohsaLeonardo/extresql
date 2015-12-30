@@ -8,7 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".MainActivity" >
+    tools:context=".MainActivityold2" >
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -228,44 +228,6 @@
             android:layout_gravity="bottom" />
 
     </LinearLayout>
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="32dp"
-        android:text="New Button"
-        android:id="@+id/escanea44"
-        android:onClick="performScanlalala44"
-        android:layout_gravity="right" />
-
-
-
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal">
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="32dp"
-            android:text="New Button"
-            android:id="@+id/buttonhkjhkjUltimo"
-            android:onClick="onClickultimo"
-
-        />
-        <EditText
-            android:layout_width="171dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/et33"
-            android:layout_gravity="right" />
-        <EditText
-            android:layout_width="140dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/et44" />
-
-    </LinearLayout>
-
-
-
 
 
 </LinearLayout>

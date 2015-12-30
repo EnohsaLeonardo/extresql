@@ -26,7 +26,7 @@ public class ScannerToDataUltimo extends Activity implements OnClickListener {
         setContentView(R.layout.activity_main);
 
         //instantiate UI items
-        scanBtn = (Button)findViewById(R.id.escanea44);
+        scanBtn = (Button)findViewById(R.id.buttonlalala);
         formatTxt = (TextView)findViewById(R.id.scan_format);
         contentTxt = (TextView)findViewById(R.id.scan_content);
         scanBtn.setOnClickListener(this);
@@ -38,7 +38,7 @@ public class ScannerToDataUltimo extends Activity implements OnClickListener {
 
     public void onClick(View v) {
         //check for scan button
-        if (v.getId() == R.id.escanea44) {
+        if (v.getId() == R.id.scan_button) {
             //instantiate ZXing integration class
             IntentIntegrator scanIntegrator = new IntentIntegrator(this);
             //start scanning
@@ -62,7 +62,7 @@ public class ScannerToDataUltimo extends Activity implements OnClickListener {
             //contentTxt.setText("CONTENT: " + scanContent);
 
             setContentView(R.layout.activity_main);
-            TextView txtCambiado = (TextView)findViewById(R.id.et33);
+            TextView txtCambiado = (TextView)findViewById(R.id.etName);
             txtCambiado.setText(resultadofinal44);
 
 
