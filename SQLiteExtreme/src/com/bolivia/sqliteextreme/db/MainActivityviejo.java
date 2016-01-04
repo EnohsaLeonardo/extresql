@@ -68,8 +68,8 @@ public class MainActivityviejo extends Activity implements OnClickListener{
 		setContentView(R.layout.activity_main);
 		//
 		chIdioma = (CheckBox) findViewById( R.id.chIdioma );
-		txtName = (EditText) findViewById( R.id.etName);
-		txtName1 = (EditText) findViewById( R.id.etName1 );
+		txtName = (EditText) findViewById( R.id.txtName);
+		txtName1 = (EditText) findViewById( R.id.txtName1);
 		btnRegistrar = (Button) findViewById(R.id.btnRegistrar );
 		btnRegistrar.setOnClickListener( this );
 		btnCancelar = (Button) findViewById(R.id.btnCancelar );
@@ -177,8 +177,8 @@ public class MainActivityviejo extends Activity implements OnClickListener{
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		super.onActivityResult(requestCode, resultCode, data);
-		EditText et3 = (EditText) findViewById(R.id.etName);
-		EditText et4 = (EditText) findViewById(R.id.etName1);
+		EditText et3 = (EditText) findViewById(R.id.txtName);
+		EditText et4 = (EditText) findViewById(R.id.txtName1);
 
 		if (requestCode == 1){
 			if(resultCode == RESULT_OK){

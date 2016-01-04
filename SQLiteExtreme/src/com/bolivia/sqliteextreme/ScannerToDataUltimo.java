@@ -9,8 +9,8 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.zxing.integration.android.IntentIntegrator;
-import com.google.zxing.integration.android.IntentResult;
+import com.bolivia.sqliteextreme.android.IntentIntegrator;
+import com.bolivia.sqliteextreme.android.IntentResult;
 
 public class ScannerToDataUltimo extends Activity implements OnClickListener {
 
@@ -48,7 +48,7 @@ public class ScannerToDataUltimo extends Activity implements OnClickListener {
 
     public void onActivityResult(int requestCode, int resultCode, Intent intent) {
         //retrieve result of scanning - instantiate ZXing object
-        IntentResult scanningResult = IntentIntegrator.parseActivityResult(requestCode, resultCode, intent, 0);
+        IntentResult scanningResult = IntentIntegrator.parseActivityResult(requestCode, resultCode, intent);
         //check we have a valid result
         if (scanningResult != null) {
             //get content from Intent Result
@@ -62,7 +62,7 @@ public class ScannerToDataUltimo extends Activity implements OnClickListener {
             //contentTxt.setText("CONTENT: " + scanContent);
 
             setContentView(R.layout.activity_main);
-            TextView txtCambiado = (TextView)findViewById(R.id.etName);
+            TextView txtCambiado = (TextView)findViewById(R.id.txtName);
             txtCambiado.setText(resultadofinal44);
 
 

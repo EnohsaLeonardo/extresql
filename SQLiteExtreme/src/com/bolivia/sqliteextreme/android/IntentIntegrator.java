@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.google.zxing.integration.android;
+package com.bolivia.sqliteextreme.android;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -26,6 +26,7 @@ import android.content.pm.ResolveInfo;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 
 import java.util.Arrays;
 import java.util.Collection;
@@ -146,8 +147,8 @@ public class IntentIntegrator {
   private List<String> targetApplications;
   private final Map<String,Object> moreExtras;
 
-  public IntentIntegrator(Activity activity) {
-    this.activity = activity;
+  public IntentIntegrator(View.OnClickListener activity) {
+    this.activity = (Activity) activity;
     title = DEFAULT_TITLE;
     message = DEFAULT_MESSAGE;
     buttonYes = DEFAULT_YES;
@@ -333,7 +334,7 @@ public class IntentIntegrator {
    *  else an {@link IntentResult} containing the result of the scan. If the user cancelled scanning,
    *  the fields will be null.
    */
-  public static IntentResult parseActivityResult(int requestCode, int resultCode, Intent intent, int b) {
+  public static IntentResult parseActivityResult(int requestCode, int resultCode, Intent intent) {
     if (requestCode == REQUEST_CODE) {
       if (resultCode == Activity.RESULT_OK) {
         String contents = intent.getStringExtra("SCAN_RESULT");

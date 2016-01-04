@@ -1,3 +1,4 @@
+/*
 
 package com.bolivia.sqliteextreme;
 
@@ -20,8 +21,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bolivia.sqliteextreme.db.SQLite;
-import com.google.zxing.integration.android.IntentIntegrator;
-import com.google.zxing.integration.android.IntentResult;
+import com.bolivia.sqliteextreme.android.IntentIntegrator;
+import com.bolivia.sqliteextreme.android.IntentResult;
 
 import java.util.Calendar;
 
@@ -122,20 +123,22 @@ public class MainActivityold2 extends Activity implements OnClickListener {
 	protected void onSaveInstanceState(Bundle outState) {
 		// TODO Auto-generated method stub
 		super.onSaveInstanceState(outState);
-		/*String edit1 = txtName.getText().toString();
+		*/
+/*String edit1 = txtName.getText().toString();
 		String edit2 = txtName1.getText().toString();
 		outState.putString("STRING1", edit1);
 		outState.putString("STRING2", edit2);
-*/
+*//*
 
-		//Se Instancia el botón de Scan
+
+		//Se Instancia el botï¿½n de Scan
 		Button scanBtn = (Button) findViewById(R.id.buttonlalala);
 		Button scanBtn1 = (Button) findViewById(R.id.buttonlalala1);
-//Se Instancia el Campo de Texto para el nombre del formato de código de barra
+//Se Instancia el Campo de Texto para el nombre del formato de cï¿½digo de barra
 		TextView formatTxt = (TextView) findViewById(R.id.etName);
-//Se Instancia el Campo de Texto para el contenido  del código de barra
+//Se Instancia el Campo de Texto para el contenido  del cï¿½digo de barra
 		TextView contentTxt = (TextView) findViewById(R.id.etName1);
-//Se agrega la clase MainActivityold3.java como Listener del evento click del botón de Scan
+//Se agrega la clase MainActivityold3.java como Listener del evento click del botï¿½n de Scan
 		scanBtn.setOnClickListener(this);
 		scanBtn1.setOnClickListener(this);
 	}
@@ -163,12 +166,14 @@ public class MainActivityold2 extends Activity implements OnClickListener {
 
 	public void onResume() {
 		super.onResume();
-		/*if (l4 == null) {
+		*/
+/*if (l4 == null) {
 			txtName.setText("Hola: " + l4 + ".");
 		}
 		if (l5 == null) {
 			txtName1.setText("hola2: " + l5 + ".");
-		}*/
+		}*//*
+
 
 
 		//.setText(lll);
@@ -211,6 +216,7 @@ public class MainActivityold2 extends Activity implements OnClickListener {
 		}
 	}
 
+*/
 /*@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		super.onActivityResult(requestCode, resultCode, data);
@@ -234,12 +240,17 @@ public class MainActivityold2 extends Activity implements OnClickListener {
 
 	}
 *//*
+*/
+/*
 
 
-	*/
+	*//*
+
+*/
 /**
 	 * Metodo para mostrar un DatePickerDialog
-	 * */
+	 * *//*
+
 
 	public void verDatePicker()
 	{
@@ -281,8 +292,8 @@ public class MainActivityold2 extends Activity implements OnClickListener {
 	}
 
 	public void performScanlalala(View view) {
-        			com.google.zxing.integration.android.IntentIntegrator scanIntegrator =
-				new com.google.zxing.integration.android.IntentIntegrator(this);
+        			com.bolivia.sqliteextreme.android.IntentIntegrator scanIntegrator =
+				new com.bolivia.sqliteextreme.android.IntentIntegrator(this);
 		scanIntegrator.initiateScan();
 		IntentResult scanningResult = IntentIntegrator.parseActivityResult(requestCode, resultCode, intent,b);
 	}
@@ -290,8 +301,8 @@ public class MainActivityold2 extends Activity implements OnClickListener {
 	public void performScanlalala1(View view) {
 		c=0;
 		c=5;
-		com.google.zxing.integration.android.IntentIntegrator scanIntegrator =
-				new com.google.zxing.integration.android.IntentIntegrator(this);
+		com.bolivia.sqliteextreme.android.IntentIntegrator scanIntegrator =
+				new com.bolivia.sqliteextreme.android.IntentIntegrator(this);
 		scanIntegrator.initiateScan();
 		IntentResult scanningResult = IntentIntegrator.parseActivityResult(requestCode, resultCode, intent,b);
 		//setContentView(R.layout.activity_main);
@@ -317,7 +328,7 @@ public class MainActivityold2 extends Activity implements OnClickListener {
 		if (scanningResult != null) {
 						String scanContent = scanningResult.getContents();
 			txtName.setText("Contenido: " + scanContent);
-			//Desplegamos en pantalla el nombre del formato del código de barra scaneado
+			//Desplegamos en pantalla el nombre del formato del cï¿½digo de barra scaneado
 			String scanFormat = scanningResult.getFormatName();
 			txtName1.setText("Formato: " + scanFormat);
 		}else{
@@ -326,7 +337,8 @@ public class MainActivityold2 extends Activity implements OnClickListener {
 					"No se ha recibido datos del scaneo!", Toast.LENGTH_SHORT);
 			toast.show();
 		}}}
-	/*protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+	*/
+/*protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		super.onActivityResult(requestCode, resultCode, data);
 		EditText et3 = (EditText) findViewById(R.id.etName);
 		EditText et4 = (EditText) findViewById(R.id.etName1);
@@ -346,10 +358,11 @@ public class MainActivityold2 extends Activity implements OnClickListener {
 			}
 
 		}}}
-	/*public void onActivityResult(int requestCode, int resultCode, Intent intent) {
+	*/
+/*public void onActivityResult(int requestCode, int resultCode, Intent intent) {
 	//retrieve result of scanning - instantiate ZXing object
 	IntentResult scanningResult =
-	com.google.zxing.integration.android.IntentIntegrator.parseActivityResult(requestCode, resultCode, intent, b);
+	com.bolivia.sqliteextreme.android.IntentIntegrator.parseActivityResult(requestCode, resultCode, intent, b);
 	//get content from Intent Result
 	String scanContent = scanningResult.getContents();
 	String resultadofinal = scanningResult.getContents();
@@ -382,3 +395,4 @@ public class MainActivityold2 extends Activity implements OnClickListener {
 	}
 }
 
+*/
